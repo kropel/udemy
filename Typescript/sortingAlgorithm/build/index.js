@@ -1,2 +1,11 @@
 "use strict";
-console.log('yyyooo');
+Object.defineProperty(exports, "__esModule", { value: true });
+var Sorter_1 = require("./Sorter");
+var NumberCollection_1 = require("./NumberCollection");
+var StringCollection_1 = require("./StringCollection");
+var numberCollection = new NumberCollection_1.NumberCollection([4, 1, 6, 9, -8]);
+var stringCollection = new StringCollection_1.StringCollection('AcbHa');
+var sorter = new Sorter_1.Sorter(stringCollection);
+console.log(sorter.collection);
+sorter.sort();
+console.log(sorter.collection);
