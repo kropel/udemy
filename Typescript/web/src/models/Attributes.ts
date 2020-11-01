@@ -5,7 +5,11 @@ export class Attributes<T> {
     return this.date[key];
   }
 
-  set(update: T): void {
+  set = (update: T): void => {
     Object.assign(this.date, update);
+  };
+
+  getAll(): T {
+    return this.date;
   }
 }

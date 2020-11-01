@@ -4,7 +4,9 @@ export class Eventing {
   events: { [key: string]: Callback[] } = {};
 
   on(eventName: string, callback: Callback): void {
-    const handlers = this.events[eventName] || [];
+    const handlers = this.events.hasOwnProperty(eventName)
+      ? this.events[eventName]
+      : [];
     handlers.push(callback);
     this.events[eventName] = handlers;
   }
